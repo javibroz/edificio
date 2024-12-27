@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Edificios</title>
+    <script src="edif.js" defer></script>
+</head>
+
+<body>
+    <h1>Gestión de Edificios</h1>
+    <form id="edificioForm">
+        <label for="calle">Calle:</label>
+        <input type="text" id="calle" required>
+        <br><br>
+        <label for="numero">Número:</label>
+        <input type="number" id="numero" required>
+        <br><br>
+        <label for="codigoPostal">Código Postal:</label>
+        <input type="text" id="codigoPostal" required>
+        <br><br>
+        <label for="plantas">Número de plantas:</label>
+        <input type="number" id="plantas" required>
+        <br><br>
+        <button type="submit">Crear Edificio</button><br><br>
+        <button onclick='mostrarAgregarPlantas()' id="agregarPlantas" style="display: none">Agregar Plantas</button><br><br>
+
+        <div id="div-agregar" style="display: none; border:rgb(58, 30, 102) 1px solid; padding:8px ;";>
+            
+            <label for="agregarPlantas" >Número de plantas a añadir:</label>
+            <input id="numPlantas" type="number"  size="1" value="1">
+            <label for="numPisos">Pisos por planta:</label>
+            <input id="numPisos" type="number"  size="1" value="1"><br><br>
+            <button onclick = 'registrarPlantasYPisos()' >Guardar Cambios</button>
+        </div>
+    </form>
+
+    <div id="resultado"></div>
+</body>
+
+</html>
